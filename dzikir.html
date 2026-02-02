@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzikir Harian - Menenangkan Hati, Menjaga Iman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #2a6e3f;
+            --light-green: #d4e8d9;
+            --soft-green: #e8f5eb;
+            --pastel-blue: #e6f2ff;
+            --cream: #f9f5e9;
+            --dark-text: #2d3748;
+            --light-text: #4a5568;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --primary-green: #3a8e5f;
+            --light-green: #1a3c26;
+            --soft-green: #14281e;
+            --pastel-blue: #1a2533;
+            --cream: #1a1a1a;
+            --dark-text: #e2e8f0;
+            --light-text: #cbd5e0;
+            --white: #2d3748;
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-green), #1e4d2c);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 4px 12px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+
+        .logo {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .active {
+            color: var(--primary-green) !important;
+        }
+
+        .active::after {
+            width: 100% !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        }
+
+        /* Utility Buttons */
+        .utility-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn:hover {
+            background-color: #1e4d2c;
+            transform: translateY(-2px);
+        }
+
+        .text-size-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .text-size-btn {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .text-size-btn:hover {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0 4rem;
+        }
+
+        .section-title {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-green);
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        /* Dzikir Cards */
+        .dzikir-section {
+            margin-bottom: 4rem;
+        }
+
+        .dzikir-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dzikir-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 16px var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .dzikir-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px var(--shadow);
+        }
+
+        .dzikir-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+
+        .dzikir-number {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            text-align: right;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .latin-text {
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-green);
+        }
+
+        .translation {
+            color: var(--dark-text);
+            margin-bottom: 1.5rem;
+        }
+
+        .dzikir-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .counter-btn {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .counter-btn:hover {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .counter-value {
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .completed .counter-value {
+            color: var(--primary-green);
+        }
+
+        .audio-btn {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .audio-btn:hover {
+            background-color: #1e4d2c;
+            transform: scale(1.05);
+        }
+
+        /* Shalat-specific styles */
+        .shalat-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .shalat-title {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px dashed var(--light-green);
+        }
+
+        .after-shalat-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .quote-source {
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                margin-top: 1rem;
+            }
+            
+            .nav-links.active {
+                max-height: 300px;
+            }
+            
+            .nav-links li {
+                margin: 0;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 0.8rem 0;
+                border-bottom: 1px solid var(--light-green);
+            }
+            
+            .utility-buttons {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .dzikir-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .after-shalat-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .arabic-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .dzikir-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <h1>Dzikir Harian</h1>
+            <p class="subtitle">Menenangkan Hati, Menjaga Iman Setiap Waktu</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Dzikir Harian</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Beranda</a></li>
+                <li><a href="#dzikir-pagi">Dzikir Pagi</a></li>
+                <li><a href="#dzikir-petang">Dzikir Petang</a></li>
+                <li><a href="#dzikir-shalat">Setelah Shalat</a></li>
+                <li><a href="#keutamaan">Keutamaan</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </ul>
+            
+            <div class="utility-buttons">
+                <div class="text-size-controls">
+                    <button class="text-size-btn" id="decreaseText">A-</button>
+                    <button class="text-size-btn" id="resetText">A</button>
+                    <button class="text-size-btn" id="increaseText">A+</button>
+                </div>
+                <button class="btn" id="darkModeToggle">
+                    <i class="fas fa-moon"></i> Mode Gelap
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="beranda">
+            <h2 class="section-title">Selamat Datang</h2>
+            <p class="intro-text">
+                Website ini menyajikan kumpulan dzikir harian berdasarkan sunnah Nabi Muhammad SAW. 
+                Dzikir pagi, petang, dan setelah shalat disajikan dengan teks Arab, latin, dan terjemahan 
+                untuk memudahkan Anda dalam beribadah dan mendekatkan diri kepada Allah SWT.
+            </p>
+        </section>
+
+        <!-- Dzikir Pagi -->
+        <section class="dzikir-section" id="dzikir-pagi">
+            <h2 class="section-title">Dzikir Pagi</h2>
+            <div class="dzikir-container" id="dzikirPagiContainer">
+                <!-- Dzikir akan diisi dengan JavaScript -->
+            </div>
+        </section>
+
+        <!-- Dzikir Petang -->
+        <section class="dzikir-section" id="dzikir-petang">
+            <h2 class="section-title">Dzikir Petang</h2>
+            <div class="dzikir-container" id="dzikirPetangContainer">
+                <!-- Dzikir akan diisi dengan JavaScript -->
+            </div>
+        </section>
+
+        <!-- Dzikir Setelah Shalat -->
+        <section class="dzikir-section" id="dzikir-shalat">
+            <h2 class="section-title">Dzikir Setelah Shalat</h2>
+            <div id="shalatCategories">
+                <!-- Kategori shalat akan diisi dengan JavaScript -->
+            </div>
+        </section>
+
+        <!-- Keutamaan Dzikir -->
+        <section class="dzikir-section" id="keutamaan">
+            <h2 class="section-title">Keutamaan Dzikir</h2>
+            <div class="dzikir-card">
+                <p>Dzikir memiliki banyak keutamaan, di antaranya:</p>
+                <br>
+                <ol style="padding-left: 1.5rem;">
+                    <li>Mendapatkan ketenangan hati dan ketentraman jiwa</li>
+                    <li>Mendapatkan perlindungan Allah SWT</li>
+                    <li>Mendapatkan ampunan dosa dan rahmat Allah</li>
+                    <li>Menjadi tanaman surga bagi yang membacanya</li>
+                    <li>Menjauhkan dari gangguan setan</li>
+                    <li>Mendapatkan pahala yang berlipat ganda</li>
+                    <li>Mengisi waktu dengan kebaikan</li>
+                </ol>
+                <br>
+                <p>Rasulullah SAW bersabda: <i>"Perumpamaan orang yang berdzikir kepada Tuhannya dan orang yang tidak berdzikir adalah seperti orang yang hidup dan orang yang mati."</i> (HR. Bukhari)</p>
+            </div>
+        </section>
+
+        <!-- Tentang -->
+        <section class="dzikir-section" id="tentang">
+            <h2 class="section-title">Tentang</h2>
+            <div class="dzikir-card">
+                <p>Website Dzikir Harian dibuat sebagai sarana untuk memudahkan umat Muslim dalam melaksanakan dzikir harian sesuai sunnah Nabi Muhammad SAW.</p>
+                <br>
+                <p>Dzikir-dzikir yang disajikan diambil dari sumber-sumber terpercaya dan disusun dengan tampilan yang tenang dan menenangkan agar mendukung kekhusyukan dalam beribadah.</p>
+                <br>
+                <p>Semoga website ini bermanfaat dan menjadi amal jariyah bagi pembuat dan penggunanya. Aamiin.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="quote">
+                "Orang-orang yang beriman dan hati mereka menjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram."
+            </div>
+            <div class="quote-source">(QS. Ar-Ra'd: 28)</div>
+            <div class="copyright">
+                &copy; 2023 Dzikir Harian. Semua hak dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Dzikir
+        const dzikirData = {
+            pagi: [
+                {
+                    id: 1,
+                    arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+                    latin: "A'udzu billahi minasy syaithonir rojim",
+                    translation: "Aku berlindung kepada Allah dari setan yang terkutuk",
+                    count: 1
+                },
+                {
+                    id: 2,
+                    arabic: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+                    latin: "Bismillahirrahmanirrahim",
+                    translation: "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang",
+                    count: 1
+                },
+                {
+                    id: 3,
+                    arabic: "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ",
+                    latin: "Allahu la ilaha illa huwal hayyul qayyum, la ta'khudzuhu sinatuw wala naum",
+                    translation: "Allah, tidak ada Tuhan selain Dia. Yang Maha Hidup, Yang Maha Berdiri Sendiri. Tidak mengantuk dan tidak tidur",
+                    count: 1
+                },
+                {
+                    id: 4,
+                    arabic: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+                    latin: "Subhanallah wa bihamdih",
+                    translation: "Maha Suci Allah dan segala puji bagi-Nya",
+                    count: 100
+                },
+                {
+                    id: 5,
+                    arabic: "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+                    latin: "La ilaha illallahu wahdahu la syarika lah, lahul mulku wa lahul hamdu wa huwa 'ala kulli syai'in qadir",
+                    translation: "Tidak ada tuhan yang berhak disembah selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan segala pujian. Dia Maha Kuasa atas segala sesuatu",
+                    count: 10
+                }
+            ],
+            petang: [
+                {
+                    id: 1,
+                    arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+                    latin: "A'udzu billahi minasy syaithonir rojim",
+                    translation: "Aku berlindung kepada Allah dari setan yang terkutuk",
+                    count: 1
+                },
+                {
+                    id: 2,
+                    arabic: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+                    latin: "Bismillahirrahmanirrahim",
+                    translation: "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang",
+                    count: 1
+                },
+                {
+                    id: 3,
+                    arabic: "آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ",
+                    latin: "Amanar rasulu bima unzila ilaihi mir rabbihi wal mu'minun",
+                    translation: "Rasul telah beriman kepada Al-Qur'an yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman",
+                    count: 1
+                },
+                {
+                    id: 4,
+                    arabic: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+                    latin: "Subhanallah wa bihamdih",
+                    translation: "Maha Suci Allah dan segala puji bagi-Nya",
+                    count: 100
+                },
+                {
+                    id: 5,
+                    arabic: "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ",
+                    latin: "Astaghfirullahal 'azhim",
+                    translation: "Aku memohon ampun kepada Allah Yang Maha Agung",
+                    count: 100
+                }
+            ],
+            afterShalat: {
+                umum: [
+                    {
+                        id: 1,
+                        arabic: "أَسْتَغْفِرُ اللَّهَ",
+                        latin: "Astaghfirullah",
+                        translation: "Aku memohon ampun kepada Allah",
+                        count: 3
+                    },
+                    {
+                        id: 2,
+                        arabic: "اللَّهُمَّ أَنْتَ السَّلاَمُ وَمِنْكَ السَّلاَمُ تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَالإِكْرَامِ",
+                        latin: "Allahumma antas salam wa minkas salam tabarakta ya dzal jalali wal ikram",
+                        translation: "Ya Allah, Engkau adalah As-Salam (Maha Sejahtera), dari-Mu segala keselamatan, Maha Suci Engkau, wahai Tuhan Yang memiliki Keagungan dan Kemuliaan",
+                        count: 1
+                    },
+                    {
+                        id: 3,
+                        arabic: "سُبْحَانَ اللَّهِ",
+                        latin: "Subhanallah",
+                        translation: "Maha Suci Allah",
+                        count: 33
+                    },
+                    {
+                        id: 4,
+                        arabic: "الْحَمْدُ لِلَّهِ",
+                        latin: "Alhamdulillah",
+                        translation: "Segala puji bagi Allah",
+                        count: 33
+                    },
+                    {
+                        id: 5,
+                        arabic: "اللَّهُ أَكْبَرُ",
+                        latin: "Allahu akbar",
+                        translation: "Allah Maha Besar",
+                        count: 34
+                    },
+                    {
+                        id: 6,
+                        arabic: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ",
+                        latin: "Allahu la ilaha illa huwal hayyul qayyum, la ta'khudzuhu sinatuw wala naum",
+                        translation: "Allah, tidak ada tuhan selain Dia. Yang Maha Hidup, Yang Maha Berdiri Sendiri. Tidak mengantuk dan tidak tidur",
+                        count: 1
+                    }
+                ]
+            }
+        };
+
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const decreaseTextBtn = document.getElementById('decreaseText');
+        const resetTextBtn = document.getElementById('resetText');
+        const increaseTextBtn = document.getElementById('increaseText');
+        const dzikirPagiContainer = document.getElementById('dzikirPagiContainer');
+        const dzikirPetangContainer = document.getElementById('dzikirPetangContainer');
+        const shalatCategories = document.getElementById('shalatCategories');
+
+        // State
+        let currentTextSize = 1;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render dzikir pagi
+            renderDzikir(dzikirData.pagi, dzikirPagiContainer, 'pagi');
+            
+            // Render dzikir petang
+            renderDzikir(dzikirData.petang, dzikirPetangContainer, 'petang');
+            
+            // Render dzikir setelah shalat
+            renderAfterShalatDzikir();
+            
+            // Set active nav link based on scroll
+            setActiveNavOnScroll();
+            
+            // Load saved preferences
+            loadPreferences();
+        });
+
+        // Render Dzikir
+        function renderDzikir(dzikirArray, container, type) {
+            container.innerHTML = '';
+            
+            dzikirArray.forEach((dzikir, index) => {
+                const dzikirCard = document.createElement('div');
+                dzikirCard.className = 'dzikir-card';
+                dzikirCard.dataset.id = `${type}-${dzikir.id}`;
+                
+                // Check if completed
+                const savedCount = localStorage.getItem(`${type}-${dzikir.id}`);
+                const currentCount = savedCount ? parseInt(savedCount) : 0;
+                const isCompleted = currentCount >= dzikir.count;
+                
+                if (isCompleted) {
+                    dzikirCard.classList.add('completed');
+                }
+                
+                dzikirCard.innerHTML = `
+                    <div class="dzikir-header">
+                        <div class="dzikir-number">${index + 1}</div>
+                        <button class="audio-btn" onclick="playAudio(${dzikir.id}, '${type}')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="arabic-text">${dzikir.arabic}</div>
+                    <div class="latin-text">${dzikir.latin}</div>
+                    <div class="translation">${dzikir.translation}</div>
+                    <div class="dzikir-controls">
+                        <div class="counter">
+                            <button class="counter-btn" onclick="decreaseCounter('${type}', ${dzikir.id}, ${dzikir.count})">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <div class="counter-value">
+                                <span id="counter-${type}-${dzikir.id}">${currentCount}</span> / ${dzikir.count}
+                            </div>
+                            <button class="counter-btn" onclick="increaseCounter('${type}', ${dzikir.id}, ${dzikir.count})">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="btn" onclick="resetCounter('${type}', ${dzikir.id}, ${dzikir.count})">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(dzikirCard);
+            });
+        }
+
+        // Render After Shalat Dzikir
+        function renderAfterShalatDzikir() {
+            const shalatNames = ['Subuh', 'Dzuhur', 'Ashar', 'Maghrib', 'Isya'];
+            
+            shalatNames.forEach(shalat => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'shalat-category';
+                
+                categoryDiv.innerHTML = `
+                    <h3 class="shalat-title">Dzikir Setelah Shalat ${shalat}</h3>
+                    <div class="after-shalat-container" id="afterShalat-${shalat}">
+                        <!-- Dzikir umum akan diisi -->
+                    </div>
+                `;
+                
+                shalatCategories.appendChild(categoryDiv);
+                
+                // Render dzikir umum untuk setiap shalat
+                const container = document.getElementById(`afterShalat-${shalat}`);
+                renderDzikir(dzikirData.afterShalat.umum, container, `shalat-${shalat.toLowerCase()}`);
+            });
+        }
+
+        // Counter Functions
+        function increaseCounter(type, id, maxCount) {
+            const counterKey = `${type}-${id}`;
+            const counterElement = document.getElementById(`counter-${counterKey}`);
+            let currentCount = parseInt(counterElement.textContent);
+            
+            if (currentCount < maxCount) {
+                currentCount++;
+                counterElement.textContent = currentCount;
+                localStorage.setItem(counterKey, currentCount);
+                
+                // Check if completed
+                if (currentCount >= maxCount) {
+                    const dzikirCard = document.querySelector(`[data-id="${counterKey}"]`);
+                    dzikirCard.classList.add('completed');
+                }
+            }
+        }
+
+        function decreaseCounter(type, id, maxCount) {
+            const counterKey = `${type}-${id}`;
+            const counterElement = document.getElementById(`counter-${counterKey}`);
+            let currentCount = parseInt(counterElement.textContent);
+            
+            if (currentCount > 0) {
+                currentCount--;
+                counterElement.textContent = currentCount;
+                localStorage.setItem(counterKey, currentCount);
+                
+                // Remove completed class if not completed anymore
+                if (currentCount < maxCount) {
+                    const dzikirCard = document.querySelector(`[data-id="${counterKey}"]`);
+                    dzikirCard.classList.remove('completed');
+                }
+            }
+        }
+
+        function resetCounter(type, id, maxCount) {
+            const counterKey = `${type}-${id}`;
+            const counterElement = document.getElementById(`counter-${counterKey}`);
+            
+            counterElement.textContent = 0;
+            localStorage.setItem(counterKey, 0);
+            
+            // Remove completed class
+            const dzikirCard = document.querySelector(`[data-id="${counterKey}"]`);
+            dzikirCard.classList.remove('completed');
+        }
+
+        // Audio function (simulated)
+        function playAudio(id, type) {
+            alert(`Memutar audio dzikir ${type} nomor ${id}. (Fitur audio akan diimplementasikan dengan API audio sesungguhnya)`);
+        }
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Dark Mode Toggle
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            const text = darkModeToggle.querySelector('span');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                text.textContent = 'Mode Terang';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                text.textContent = 'Mode Gelap';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // Text Size Controls
+        decreaseTextBtn.addEventListener('click', function() {
+            if (currentTextSize > 0.8) {
+                currentTextSize -= 0.1;
+                updateTextSize();
+            }
+        });
+
+        resetTextBtn.addEventListener('click', function() {
+            currentTextSize = 1;
+            updateTextSize();
+        });
+
+        increaseTextBtn.addEventListener('click', function() {
+            if (currentTextSize < 1.5) {
+                currentTextSize += 0.1;
+                updateTextSize();
+            }
+        });
+
+        function updateTextSize() {
+            document.body.style.fontSize = `${currentTextSize}rem`;
+            localStorage.setItem('textSize', currentTextSize);
+        }
+
+        // Set active nav on scroll
+        function setActiveNavOnScroll() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollY >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Load preferences from localStorage
+        function loadPreferences() {
+            // Dark mode
+            const darkModePref = localStorage.getItem('darkMode');
+            if (darkModePref === 'enabled') {
+                document.body.classList.add('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                const text = darkModeToggle.querySelector('span');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                text.textContent = 'Mode Terang';
+            }
+            
+            // Text size
+            const savedTextSize = localStorage.getItem('textSize');
+            if (savedTextSize) {
+                currentTextSize = parseFloat(savedTextSize);
+                document.body.style.fontSize = `${currentTextSize}rem`;
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
